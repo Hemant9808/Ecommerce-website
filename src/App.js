@@ -4,10 +4,37 @@ import { ProductList } from './features/product-list/ProductList.js';
 import { Counter } from './features/counter/counter.js';
 import './App.css';
 import Home from './pages/Home.js';
+import LoginPage from './pages/LoginPage.js';
+import SignupPage from './pages/SignupPage.js';
+import { createRoot } from "react-dom/client";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Link,
+} from "react-router-dom";
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <div>
+        <Home></Home>
+      </div>
+    ),
+  },
+  {
+    path: "/Login",
+    element: <div><LoginPage></LoginPage></div>,
+  },
+  {
+    path: "/Signup",
+    element: <div><SignupPage></SignupPage></div>,
+  },
+]);
 function App() {
   return (
     <div className="App">
-    <Home></Home>
+    <RouterProvider router={router} />
     </div>
   );
 }
