@@ -6,6 +6,7 @@ import './App.css';
 import Home from './pages/Home.js';
 import LoginPage from './pages/LoginPage.js';
 import SignupPage from './pages/SignupPage.js';
+import CartPage from './pages/CartPage.js';
 import { createRoot } from "react-dom/client";
 import {
   createBrowserRouter,
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
   {
     path: "/Signup",
     element: <div><SignupPage></SignupPage></div>,
+  },
+  {
+    path: "/Cart",
+    element: <div><CartPage></CartPage></div>,
   },
 ]);
 function App() {
